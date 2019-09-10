@@ -9,7 +9,7 @@ Configure module with Switch1 to corrisponding GPIO in console
 ```
 SwitchTopic 0
 SwitchMode1 1
-Rule1 on switch1#state do publish stat/camera/PIR/STATE %value% endon
+Rule1 on switch1#state do publish stat/camera/motion/STATE %value% endon
 Rule1 1
 ```
 
@@ -19,6 +19,27 @@ can be multiple rules in the same rule set
 SwitchTopic 0
 SwitchMode1 1
 SwitchMode2 1
-Rule1 on switch1#state do publish stat/camera/PIR/STATE %value% endon on switch2#state do publish stat/camera/REED/STATE %value% endon
+Rule1 on switch1#state do publish stat/camera/motion/STATE %value% endon on switch2#state do publish stat/camera/door/STATE %value% endon
 Rule1 1
+```
+
+https://www.home-assistant.io/components/binary_sensor/
+
+## Home Assistant configuration
+```
+binary_sensor:
+  - platform: mqtt
+    name: "Camera movimento"
+    state_topic: "stat/camera/motion/STATE"
+    availability_topic: "tele/camera/sensori/LWT"
+    payload_on: "1"
+    payload_off: "0"
+    device_class: motion
+  - platform: mqtt
+    name: "Camera porta"
+    state_topic: "stat/camera/door/STATE"
+    availability_topic: "tele/camera/sensori/LWT"
+    payload_on: "1"
+    payload_off: "0"
+    device_class: door
 ```
