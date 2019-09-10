@@ -2,8 +2,8 @@
 ### Can be REED, PIR, button, switch, at pin status change send mqtt message 
 
 ## Tasmota configuration
-Configure module with Switch1 to corrisponding GPIO in console
-configure MQTT topic camera/sensori
+Configure module with Switch1 to corrisponding GPIO in console.
+Configure MQTT topic camera/sensori.
 
 > ON \<trigger\> DO \<command\> [ENDON | BREAK]
   
