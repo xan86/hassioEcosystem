@@ -32,8 +32,10 @@ binary_sensor:
     name: "Camera movimento"
     state_topic: "stat/camera/motion/STATE"
     availability_topic: "tele/camera/sensori/LWT"
-    payload_on: "1"
-    payload_off: "0"
+    payload_on: 1
+    payload_off: 0
+    payload_available: "Online"
+    payload_not_available: "Offline"
     device_class: motion
   - platform: mqtt
     name: "Camera porta"
@@ -41,6 +43,8 @@ binary_sensor:
     availability_topic: "tele/camera/sensori/LWT"
     payload_on: "1"
     payload_off: "0"
+    payload_available: "Online"
+    payload_not_available: "Offline"
     device_class: door
 ```
 
