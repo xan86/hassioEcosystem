@@ -1,4 +1,4 @@
-# Tasmota switch publish MQTT 
+# Tasmota switch as binary_sensor
 ### Can be REED, PIR, button, switch, at pin status change send mqtt message 
 
 ## Tasmota configuration
