@@ -25,8 +25,6 @@ Rule1 on switch1#state do publish stat/camera/motion/STATE %value% endon on swit
 Rule1 1
 ```
 
-https://www.home-assistant.io/components/binary_sensor/
-
 ## Home Assistant configuration
 ```
 binary_sensor:
@@ -45,3 +43,5 @@ binary_sensor:
     payload_off: "0"
     device_class: door
 ```
+
+https://www.home-assistant.io/components/binary_sensor/
