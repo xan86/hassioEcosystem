@@ -1,5 +1,5 @@
 # Tasmota switch as binary_sensor
-### Can be REED, PIR, button, switch, at pin status change send mqtt message 
+Can be REED, PIR, button, switch, at pin status change send mqtt message.
 
 ## Tasmota configuration
 Configure module with Switch1 to corrisponding GPIO in console.
