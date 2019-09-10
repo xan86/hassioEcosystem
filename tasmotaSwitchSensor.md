@@ -3,6 +3,7 @@
 
 ## Tasmota configuration
 Configure module with Switch1 to corrisponding GPIO in console.
+
 Configure MQTT topic camera/sensori.
 
 > ON \<trigger\> DO \<command\> [ENDON | BREAK]
